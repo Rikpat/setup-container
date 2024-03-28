@@ -5,7 +5,7 @@ PROCESSED=false
 WORKDIR=/workdir
 TARGETDIR=/target
 
-for path in $(find -L /workdir/data -type f); do
+for path in $(find -L $WORKDIR -type f); do
   relativepath=${path#"$WORKDIR"}
   echo "Processing $relativepath ..."
   mkdir -p "$TARGETDIR/$(dirname $relativepath)" # create directory structure if not exists
