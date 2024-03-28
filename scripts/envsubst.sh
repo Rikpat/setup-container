@@ -13,8 +13,6 @@ for path in $(find -L /workdir/data -type f); do
   PROCESSED=true
 done
 
-ls "$TARGETDIR"
-
 if [ ! $PROCESSED = true ]; then
   echo 'No files processed'
   exit 1
