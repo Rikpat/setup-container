@@ -23,7 +23,7 @@ Example deployment.yaml part for setting up config file
 ...
 initContainers:
   - name: init-config
-    image: ghcr.io/rikpat/setup-container
+    image: ghcr.io/rikpat/setup-container:main
     securityContext:
       runAsGroup: 990
       runAsUser: 990
@@ -108,7 +108,7 @@ spec:
     spec:
       containers:
       - name: download-and-unzip
-        image: ghcr.io/rikpat/setup-container
+        image: ghcr.io/rikpat/setup-container:main
         args: ["/scripts/zip.sh"] # notice this setting
         # args: ["/scripts/envsubst.sh && /scripts/zip.sh"] # it is also possible to run both
         securityContext:
