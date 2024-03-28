@@ -9,5 +9,7 @@ WORKDIR /scripts
 ENV PUID=1000
 ENV PGID=1000
 
+RUN chmod 555 /scripts/*.sh
+
 ENTRYPOINT ["/scripts/entrypoint.sh"]
 CMD ["/scripts/envsubst.sh"]
