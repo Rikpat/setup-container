@@ -119,7 +119,7 @@ spec:
         - name: ZIP_URLS
           # Space separated zips
           value: "https://repo.jellyfin.org/releases/plugin/ldap-authentication/ldap-authentication_18.0.0.0.zip https://example.com/some.other.zip"
-        - name: DESTINATION_PATH
+        - name: ZIP_DESTINATION_PATH
           value: "/target/data/plugins"
         volumeMounts:
         - name: target
